@@ -1,0 +1,121 @@
+/*ONEPAGE PROJEKT HUSSEIN & MATHIAS */
+
+body {
+    font-family: sans-serif;
+    background-color: #ffffff;
+    margin: 1em;
+}
+
+#mitgrid div {
+    font-size: 5em;
+    color: #000000;
+    text-align: center; /*sørger for teksten i divsene i mit grid bliver centreret*/
+    border-color: #000000;
+    border:1px solid black;
+}
+
+#mitgrid {
+    display: grid; 
+    grid-gap: 0px; /*Mellemrum mellem kasserne*/
+    grid-template-columns: 2fr 1fr  1fr 2fr;
+    /*grid-template-rows: 0fr 0fr 0fr 8fr 1fr 1fr 1fr 1fr;
+    */grid-template-areas:
+    "a logo logo i"
+    "b b b b" /* punktum står for at man skal springe den første over */
+    "indhold indhold indhold indhold"
+    "c c c c"
+    "d d d d"
+    "e e e e"
+    "f f f f"
+    "g g g g";
+}
+
+
+
+
+#nav {
+    background-color: white;
+    grid-area: a;
+    font-size:0.1em;
+}
+
+#nav p {
+font-size:0.2em;
+}
+
+#nav2 {
+    background-color: white;
+    grid-area: i
+}
+
+#nav2 p {
+font-size:0.2em;
+}
+
+#billede_stor {
+    grid-area: b;
+}
+
+#indhold {
+    background-color: #ffffff;
+    grid-area: indhold;
+    padding: 0.2em 0.2em 0.2em 0.2em ;
+    
+
+
+
+}
+#indhold h1 {
+    font-size:0.4em;
+    margin-top:0px;
+    
+
+}
+
+#indhold p {
+    font-size:0.3em;
+    text-align: left;
+    padding: 0em 0.2em 0.2em 0.2em;
+
+
+}
+
+
+#fakta {
+    background-color: #ffffff;
+    grid-area: c;
+
+}
+
+
+#fakta h1 {
+font-size:0.4em;
+}
+
+
+#knaek {
+    background-color: #ffffff;
+    grid-area: d;
+}
+
+#opskrifter {
+    grid-area: e;
+}
+
+#nyhedsbrev {
+    grid-area: f;
+}
+
+#logo {
+    background-color: #ffffff;
+    grid-area: logo;
+}
+
+#footer {
+    background-color: #ffffff;
+    grid-area: g;
+}
+
+
+
+
