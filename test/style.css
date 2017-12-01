@@ -1,11 +1,14 @@
 /*ONEPAGE PROJEKT HUSSEIN & MATHIAS */
 
 body {
-    font-family: sans-serif;
+    font-family: georgia,sans-serif;
     background-color: #ffffff;
     margin: 1em;
 }
 
+header {
+    text-align: center;
+}
 nav {
     font-size: 2em;
     grid-area:nav1;
@@ -25,7 +28,7 @@ nav {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     /*grid-template-rows: 0fr 0fr 0fr 8fr 1fr 1fr 1fr 1fr;
     */grid-template-areas:
-    ". logo logo ." 
+    "logo logo logo logo" 
     "nav1 nav1 nav1 nav1"
     "b b b b" /* punktum står for at man skal springe den første over */
     "indhold indhold indhold indhold"/*INDHOLD*/
@@ -40,14 +43,9 @@ nav {
 #nyhedsbrev img {
 
     width: 100%;
-
 }
 
-#logo {
 
-    text-align: center;
-    width: 100%;
-} 
 
 #billede_stor img {width:100%;
 
@@ -55,7 +53,7 @@ nav {
 }
 
 
-#logo img {height: auto; 
+#logo img {width:100%;
 
 }
 
@@ -109,7 +107,7 @@ nav {
 
 width:100%;
 font-size:3em;
-margin-bottom:1.7em;
+margin-bottom:0.4em;
 text-align:left;
 }
 
@@ -216,7 +214,7 @@ text-shadow: 0 @shadow-length 0 @shadow;
 
 
 .knaek {
-    background-color: #ddd;
+    
     grid-area: d;
 
 }
@@ -236,18 +234,21 @@ text-shadow: 0 @shadow-length 0 @shadow;
     background-color: #ffffff;
     padding-bottom: 1em;
     padding-top: 1em;
+    
 
 }
 
 .wrapper_fakta {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 0em;
+    grid-gap: 2em;
     font-size:1.5em;
     grid-template-areas:
     "tekst1 tekst2 tekst3"
     "gr1 gr2 gr3";
+    grid-row-gap:0em;
     border:1px solid black;
+
 }
 
 
@@ -298,7 +299,7 @@ text-shadow: 0 @shadow-length 0 @shadow;
 .op1_menu_header h2{
 
 text-align:left;
-padding-left:1em;
+padding-left:0.8em;
 font-size:3em;
 
 }
@@ -492,6 +493,7 @@ input[type=submit] {
     border: 2px solid black;
     border-radius: 4px;
     cursor: pointer;
+
 }
 
 input[type=submit]:hover {
@@ -534,3 +536,93 @@ nav li a {
 /* Change the link color to #111 (black) on hover */
 nav li a:hover {
     font-weight: bold;
+}
+
+@media only screen and (min-width: 680px) {
+    .wrapper_fakta {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 0em;
+    grid-row-gap:1em;
+    font-size:1.5em;
+    grid-template-areas:
+    "gr1 tekst1"
+    "gr2 tekst2"
+    "gr3 tekst3";
+    border:1px solid black;
+        
+        
+    }
+    .t1, .t2, .t3 {
+        font-size:2em;
+        margin:auto;
+        padding:1em 1em 1em 1em;
+
+    }
+}
+
+
+
+
+@media only screen and (min-width: 1024px) {
+     .wrapper_fakta{
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 2em;
+    grid-row-gap: 0em;
+    font-size:1.5em;
+    grid-template-areas:
+    "tekst1 tekst2 tekst3"
+    "gr1 gr2 gr3";
+    border:1px solid black;
+        
+        
+    }
+    #fakta h1 {
+
+        margin-bottom:0;
+        font-size:2em;
+        padding-left:0.3em;
+        
+    }
+    .t1, .t2, .t3{
+
+        font-size:1em;
+        margin-top:1em;
+    }
+    #billede_stor img{
+
+        height:70%;
+    }
+    nav {
+        font-size:1.3em;
+    }/*DETTE STYRE OPSKRIFTERNE */
+    .opskrifter_wrapper {
+    display: grid; 
+    grid-gap: 0em;
+    grid-row-gap: 0em;
+    margin-top:0em;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "op1_menu_header op1_menu_header"
+    "op1_image op1_header"
+    "op1_image op1_tekst"
+    
+    "op2_menu_header op2_menu_header"
+    "op2_image op2_header"
+    "op2_image op2_tekst"
+    
+    "op3_menu_header op3_menu_header"
+    "op3_image op3_header"
+    "op3_image op3_tekst";
+   
+}
+#nyhedsbrev {
+    
+    background: url("billeder/nyhedsbrev.png") no-repeat 0 -200px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+            }
+}
